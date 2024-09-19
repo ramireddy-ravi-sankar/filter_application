@@ -45,7 +45,7 @@ function FiltersOptionsList() {
                   onSelect={(currentValue) => {
                     const selectedValue = currentValue === value ? '' : currentValue;
                     setValue(selectedValue);
-                    setActiveFilterCondition(selectedValue); // Update Zustand state
+                    setActiveFilterCondition(selectedValue); 
                     setOpen(false);
                   }}
                 >

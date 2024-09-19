@@ -14,9 +14,9 @@ interface FilterState {
     tableFields: { value: string; label: string }[];
     activeFilterId: number | null;
     activeFilterCondition: string;
-    activeFilterField: string; // New state for the currently selected field
+    activeFilterField: string; 
     setActiveFilterId: (id: number | null) => void;
-    setActiveFilterField: (field: string) => void; // New setter function
+    setActiveFilterField: (field: string) => void;
     addFilter: () => void;
     removeFilter: (id: number) => void;
     clearAllFilters: () => void;
@@ -35,11 +35,10 @@ export const useFilterStore = create<FilterState>((set, get) => ({
     appliedFilters: [],
     tableFields: [],
     activeFilterId: null,
-    activeFilterField: '', // Initialize with empty string
+    activeFilterField: '',
     setActiveFilterId: (id: number | null) => set(() => ({ activeFilterId: id })),
     setActiveFilterField: (field: string) => {
         set(() => ({ activeFilterField: field }));
-        console.log('Selected field:', field); // Log selected field here
     },
     addFilter: () =>
         set((state) => ({

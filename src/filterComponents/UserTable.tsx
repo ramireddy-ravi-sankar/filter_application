@@ -18,9 +18,9 @@ interface Product {
 const UserTable = () => {
     const [data, setData] = useState<Product[]>([]);
     const [filteredData, setFilteredData] = useState<Product[]>([]);
-    const filters = useFilterStore((state) => state.filters); // Use Zustand store
-    const appliedFilters = useFilterStore((state) => state.appliedFilters); // Use applied filters
-    const setTableFields = useFilterStore((state) => state.setTableFields); // Zustand action to set fields
+    const filters = useFilterStore((state) => state.filters); 
+    const appliedFilters = useFilterStore((state) => state.appliedFilters); 
+    const setTableFields = useFilterStore((state) => state.setTableFields); 
 
     useEffect(() => {
         axios

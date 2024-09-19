@@ -26,7 +26,7 @@ const FilterControls: React.FC = () => {
     console.log("Selected field:", activeFilterField);
   }, [activeFilterField]);
 
-  const isDateField = activeFilterField === 'Date' || activeFilterField === 'createdAt';
+  const isDateField = activeFilterField === 'createdAt';
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -42,33 +42,33 @@ const FilterControls: React.FC = () => {
             <div
               key={filter.id}
               className="flex flex-row space-x-1"
-              onClick={() => setActiveFilterId(filter.id)}  // Set active filter
+              onClick={() => setActiveFilterId(filter.id)}  
             >
               <div className="flex items-center">
                 <Label htmlFor="where">Where</Label>
                 <div className="ml-2">
-                  <FilterFieldSelector /> {/* No props needed */}
+                  <FilterFieldSelector /> 
                 </div>
               </div>
              {!isDateField && (
                 <div className="flex items-center">
                   <div className="ml-2">
-                    <ConditionSelector /> {/* No props needed */}
+                    <ConditionSelector /> 
                   </div>
                 </div>
               )}
               <div className="flex items-center">
-                {activeFilterField === 'Date' || activeFilterField === 'createdAt' ? (
-                  // Conditionally render DateRangeSelector if selectedField is Date or createdAt
+                { activeFilterField === 'createdAt' ? (
+                  
                   <DateRangeSelector />
                 ) : (
-                  // Otherwise, show Input field for entering value
+                  
                   <Input
                     id="enter value"
                     placeholder="Enter value..."
                     className="ml-2 h-8 w-24"
                     value={filter.value}
-                    onChange={(e) => updateFilterValue(filter.id, e.target.value)} // Pass both id and value
+                    onChange={(e) => updateFilterValue(filter.id, e.target.value)} 
                   />
                 )}
               </div>
@@ -91,7 +91,7 @@ const FilterControls: React.FC = () => {
                 Clear all filters
               </Button>
               <Button className="bg-green-600 hover:bg-green-700 gap-2" onClick={() => {
-                applyFilters(); // Apply filters on button click
+                applyFilters(); 
               }}>
                 Apply filters
               </Button>

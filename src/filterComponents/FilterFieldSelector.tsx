@@ -1,4 +1,3 @@
-// FilterList.tsx
 import { useState } from 'react';
 import { CheckIcon, CaretSortIcon } from '@radix-ui/react-icons';
 import { Button } from '@/components/ui/button';
@@ -8,7 +7,7 @@ import { useFilterStore } from '@/store/useFilterStore';
 
 
 function FilterList() {
-  const { tableFields, setActiveFilterField } = useFilterStore();  // Access store functions
+  const { tableFields, setActiveFilterField } = useFilterStore();  
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('');
 
@@ -33,7 +32,7 @@ function FilterList() {
                   onSelect={(currentValue) => {
                     const selectedValue = currentValue === value ? '' : currentValue;
                     setValue(selectedValue);
-                    setActiveFilterField(selectedValue);  // Set active field and log it
+                    setActiveFilterField(selectedValue); 
                     setOpen(false);
                   }}
                 >
