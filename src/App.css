@@ -1,0 +1,52 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.center-container {
+  display: block;  /* Remove centering behavior */
+  width: 100%;     /* Make the container take up full width */
+  background-color: #f0f0f0; /* Optional background color */
+  padding: 0;
+}
+
+.table {
+  width: 100%;   /* Make the table take up the full width */
+  max-width: 100%;  /* Ensure no max-width restriction */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-collapse: collapse; /* Ensure borders collapse for a cleaner look */
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.table td {
+  background-color: #ffffff;
+}
+
+.p-5 {
+  padding: 20px;
+}
+
+.bg-light {
+  background-color: #f9f9f9;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-border {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
